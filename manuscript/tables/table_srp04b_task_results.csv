@@ -1,0 +1,4 @@
+task,historical_best_fixed_nrmse,historically_fitted_sparse_nrmse,label_free_meta_selector_nrmse,target_fitted_sparse_oracle_nrmse,historical_sparse_relative_gain,historical_sparse_gain_ci_low,historical_sparse_gain_ci_high,target_oracle_relative_gain,target_oracle_gain_ci_low,target_oracle_gain_ci_high
+NARMA10,1.006426,0.88542,0.913541,0.751775,0.120233,0.092508,0.1335,0.253025,0.190444,0.287064
+Mackey-Glass,0.61926,0.495867,0.540338,0.377551,0.199259,0.158166,0.252654,0.390319,0.292533,0.43396
+Lorenz-x,0.657726,0.527367,0.542231,0.43673,0.198197,0.153329,0.234776,0.336,0.300965,0.39781

@@ -1,0 +1,2 @@
+n_cases,true_near_containment,matched_near_containment,true_exact_containment,matched_exact_containment,mean_safe_minus_matched_gain,mean_inside_minus_outside_gain
+48,0.7708333333333334,0.40415695415695413,0.5625,0.1805981055981056,0.029664595671532974,0.03626056035108979

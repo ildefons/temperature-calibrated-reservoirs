@@ -1,0 +1,10 @@
+config,indicator,n_windows,n_cases,base_positive_rate,high_precision,low_precision,precision_lift,high_minus_low_positive_rate,high_minus_low_mean_gain,indicator_gain_corr
+smoke_N20_K5_baseline,safe_dispersion,0,0,,,,,,,
+smoke_N20_K9_finer_grid,safe_dispersion,0,0,,,,,,,
+smoke_N30_K5_larger_reservoir,safe_dispersion,0,0,,,,,,,
+smoke_N20_K5_baseline,anchor_spread,0,0,,,,,,,
+smoke_N20_K9_finer_grid,anchor_spread,0,0,,,,,,,
+smoke_N30_K5_larger_reservoir,anchor_spread,0,0,,,,,,,
+smoke_N20_K5_baseline,local_log_sensitivity,0,0,,,,,,,
+smoke_N20_K9_finer_grid,local_log_sensitivity,0,0,,,,,,,
+smoke_N30_K5_larger_reservoir,local_log_sensitivity,0,0,,,,,,,

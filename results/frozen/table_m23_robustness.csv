@@ -1,0 +1,4 @@
+configuration,N,K,safe_width_fraction,near_oracle_containment_lift,exact_oracle_containment_lift,safe_minus_matched_gain,safe_dispersion_gain_correlation,anchor_spread_gain_correlation,safe_dispersion_precision_lift,anchor_spread_precision_lift
+N60_K13_baseline,60,13,0.20673,2.86367,3.51279,0.03397,0.452482,0.409726,1.026277,0.99854
+N60_K25_finer_grid,60,25,0.175,2.16005,5.01372,0.02725,0.515428,0.513128,0.934078,0.955307
+N150_K13_larger_reservoir,150,13,0.1875,2.25742,3.30376,0.02043,0.576738,0.565557,0.925217,0.991304

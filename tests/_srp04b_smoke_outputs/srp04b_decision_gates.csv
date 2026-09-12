@@ -1,0 +1,11 @@
+gate,passed
+G0_multitask_multiseed_completed,True
+G1_global_oracle_valid,True
+G2_safe_oracle_valid,True
+G3_global_opportunity_material,True
+G4_safe_opportunity_material,True
+G5_price_of_safety_acceptable,True
+G6_global_adaptive_method,False
+G7_safe_adaptive_method,False
+G8_global_robust_aggregation,True
+G9_safe_robust_aggregation,True

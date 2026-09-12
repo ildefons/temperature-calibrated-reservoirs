@@ -1,0 +1,4 @@
+task,global_target_sparse_oracle_nrmse,certified_target_sparse_oracle_nrmse,relative_certification_cost,cost_ci_low,cost_ci_high
+Lorenz-x,0.43673,0.45848,0.049801,0.030239,0.089294
+Mackey-Glass,0.377551,0.413852,0.096148,0.07051,0.143749
+NARMA10,0.751775,0.814078,0.082875,0.01864,0.167563

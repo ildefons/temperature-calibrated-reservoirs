@@ -1,0 +1,7 @@
+Item,Value,Comment
+dataset,UCI Appliances Energy Prediction,"19729 prepared rows, 32 features"
+target,log(1+future Appliances),horizon 6 samples (~1 hour)
+temperature support range,45.62,gain/leak ranges ~0
+temperature best-safe gain,0.00341,CI lower 0.0000
+temperature safe - shuffled gain,-0.01199,"CI [-0.05331, 0.01532]; not confirmed"
+temperature path indicators,0.510 / 0.522,safe dispersion / low-high spread correlations

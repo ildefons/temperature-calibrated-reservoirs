@@ -1,0 +1,3 @@
+task,seed,domain,candidate_count,gamma,meta_selected_nrmse
+narma10,0,global,9,0.0,0.6595048398349285
+narma10,0,safe,4,0.0,0.6595048398349285

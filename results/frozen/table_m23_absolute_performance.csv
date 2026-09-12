@@ -1,0 +1,5 @@
+task,default_test_nrmse,best_safe_test_nrmse,best_grid_nrmse,safe_gain,safe_reduction_percent,full_reduction_percent
+Controlled delayed signal,0.926648,0.917126,0.90874,0.009522,1.02761,1.932557
+Delayed memory,0.772757,0.771359,0.77069,0.001398,0.180933,0.267465
+NARMA10,0.662851,0.658357,0.658357,0.004494,0.677997,0.677997
+Lorenz-x,0.032687,0.032062,0.02254,0.000625,1.913035,31.04249

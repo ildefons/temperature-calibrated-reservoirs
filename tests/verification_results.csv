@@ -1,0 +1,49 @@
+check,passed,detail
+M23 baseline containment lift,True,
+M23 K25 containment lift,True,
+M23 N150 continuous indicator,True,
+SRP04b correlated-noise gain,True,
+SRP04b missingness failure retained,True,
+SRP04b NARMA oracle,True,
+SRP04b meta selector not hidden,True,
+fresh output exists: m19a_replication_summary.csv,True,
+fresh output exists: m19b_replication_summary.csv,True,
+fresh output exists: m19c_replication_summary.csv,True,
+fresh output exists: m19d_replication_summary.csv,True,
+fresh output exists: m20a_replication_summary.csv,True,
+fresh output exists: m21_replication_summary.csv,True,
+M19a fresh safe gain nonnegative,True,0.00131284
+M19a fresh near containment > 0.5,True,0.792
+M19b fresh true > matched near containment,True,
+M19b fresh safe-minus-matched gain positive,True,0.0296646
+M19c fresh dispersion correlation positive,True,0.323
+M19c fresh anchor correlation positive,True,0.387
+M19d fresh mean safe gain positive,True,0.00158462
+M20a fresh temperature changes effective support,True,
+M20a fresh gain leaves effective support fixed,True,
+M20a fresh temperature control enrichment positive,True,
+M20a fresh sparsity support is hard and broad,True,
+01_safe_region_transfer_M19a.ipynb: author header,True,
+01_safe_region_transfer_M19a.ipynb: no embedded execution errors,True,[]
+02_safe_region_controls_M19b.ipynb: author header,True,
+02_safe_region_controls_M19b.ipynb: no embedded execution errors,True,[]
+03_indicator_reliability_M19c.ipynb: author header,True,
+03_indicator_reliability_M19c.ipynb: no embedded execution errors,True,[]
+04_standard_tasks_M19d.ipynb: author header,True,
+04_standard_tasks_M19d.ipynb: no embedded execution errors,True,[]
+05_structural_path_ablation_M20a.ipynb: author header,True,
+05_structural_path_ablation_M20a.ipynb: no embedded execution errors,True,[]
+06_appliances_energy_M20b.ipynb: author header,True,
+06_appliances_energy_M20b.ipynb: no embedded execution errors,True,[]
+07_air_quality_M20c2.ipynb: author header,True,
+07_air_quality_M20c2.ipynb: no embedded execution errors,True,[]
+08_structural_audit_M21.ipynb: author header,True,
+08_structural_audit_M21.ipynb: no embedded execution errors,True,[]
+09_grid_size_robustness_M23.ipynb: author header,True,
+09_grid_size_robustness_M23.ipynb: no embedded execution errors,True,[]
+10_distribution_shift_SRP04b.ipynb: author header,True,
+10_distribution_shift_SRP04b.ipynb: no embedded execution errors,True,[]
+11_shift_postprocessing_SRP05.ipynb: author header,True,
+11_shift_postprocessing_SRP05.ipynb: no embedded execution errors,True,[]
+M23 current-environment smoke notebook exists,True,
+SRP04b current-environment smoke notebook exists,True,

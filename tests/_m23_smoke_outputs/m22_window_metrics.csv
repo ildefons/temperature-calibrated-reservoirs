@@ -1,0 +1,10 @@
+config,N,K,task,trial,case_id,window_id,window_start,window_end,safe_width,dashboard_defined,safe_gain,full_gain,positive_safe_gain,safe_dispersion,anchor_spread,local_log_sensitivity
+smoke_N20_K5_baseline,20,5,memory_d10,0,memory_d10__trial0,0,0,50,1,False,0.0,0.0,0,,,
+smoke_N20_K5_baseline,20,5,memory_d10,0,memory_d10__trial0,1,25,75,1,False,0.0,0.0,0,,,
+smoke_N20_K5_baseline,20,5,memory_d10,0,memory_d10__trial0,2,50,100,1,False,0.0,0.038531273589486714,0,,,
+smoke_N20_K9_finer_grid,20,9,memory_d10,0,memory_d10__trial0,0,0,50,1,False,0.0,0.09005881665863791,0,,,
+smoke_N20_K9_finer_grid,20,9,memory_d10,0,memory_d10__trial0,1,25,75,1,False,0.0,0.08532748475962704,0,,,
+smoke_N20_K9_finer_grid,20,9,memory_d10,0,memory_d10__trial0,2,50,100,1,False,0.0,0.038531273589486714,0,,,
+smoke_N30_K5_larger_reservoir,30,5,memory_d10,0,memory_d10__trial0,0,0,50,1,False,0.0,0.14955853876719793,0,,,
+smoke_N30_K5_larger_reservoir,30,5,memory_d10,0,memory_d10__trial0,1,25,75,1,False,0.0,0.12414353399794531,0,,,
+smoke_N30_K5_larger_reservoir,30,5,memory_d10,0,memory_d10__trial0,2,50,100,1,False,0.0,0.07168223885847036,0,,,

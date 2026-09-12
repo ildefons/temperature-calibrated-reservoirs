@@ -1,0 +1,4 @@
+study,mean_safe_width,K,width_fraction,near_containment_lift,safe_gain,temperature_support_range,temperature_spectral_radius_range,base_positive_gain_rate,high_indicator_precision,precision_ratio,high_minus_low_mean_gain
+Synthetic path comparison,2.4,13,0.185,3.73,0.00504,55.19,0.046,0.4,0.65-0.67,1.62-1.68,~0.025
+Appliances Energy,1.75,13,0.135,4.25,0.00341,45.62,0.083,0.275,0.50-0.55,1.82-2.00,~0.0155
+Air Quality,2.5,13,0.192,3.63,0.01635,45.55,0.042,0.433,0.867,2.00,0.087-0.104

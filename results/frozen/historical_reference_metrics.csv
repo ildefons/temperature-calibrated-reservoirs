@@ -1,0 +1,29 @@
+notebook_id,metric,value,ci_low,ci_high,provenance
+M19a,near_optimal_containment,0.78125,,,historical manuscript result
+M19a,exact_oracle_containment,0.572917,,,historical manuscript result
+M19a,safe_gain,0.004702,0.003565,0.005786,historical manuscript result
+M19a,full_grid_gain,0.030254,,,historical manuscript result
+M19b,near_containment_true,0.7917,,,independent M19b study
+M19b,near_containment_shuffled,0.3854,,,independent M19b study
+M19b,exact_containment_true,0.6354,,,independent M19b study
+M19b,exact_containment_shuffled,0.1563,,,independent M19b study
+M19b,safe_minus_shuffled_gain,0.02739,0.0187,0.0371,historical manuscript result
+M19b,inside_minus_outside_gain,0.03209,0.02342,0.04143,historical manuscript result
+M19c,safe_dispersion_gain_corr,0.412,,,historical manuscript result
+M19c,anchor_spread_gain_corr,0.405,,,historical manuscript result
+M19c,safe_dispersion_high_minus_low_gain,0.01689,0.01227,0.02196,historical manuscript result
+M19c,anchor_spread_high_minus_low_gain,0.01702,0.01243,0.02207,historical manuscript result
+M19c,composite_high_minus_low_gain,0.01697,0.01228,0.02197,historical manuscript result
+M19d,near_optimal_containment,0.96875,,,historical manuscript result
+M19d,exact_oracle_containment,0.78125,,,historical manuscript result
+M19d,safe_gain,0.004634,0.00016,0.009109,historical manuscript result
+M20a,temperature_support_range,55.19,,,historical manuscript result
+M20a,sparsity_support_range,58.0,,,historical manuscript result
+M20a,temperature_spectral_radius_range,0.046,,,M21 audit of historical M20a
+M20a,gain_spectral_radius_range,1.438,,,M21 audit of historical M20a
+M20a,temperature_safe_gain,0.00504,0.00263,,historical manuscript result; only lower CI recovered
+M20a,temperature_safe_minus_shuffled_gain,0.02303,0.0117,,historical manuscript result; only lower CI recovered
+M20a,gain_safe_gain,0.00879,,,historical manuscript result
+M20a,leak_safe_gain,0.01249,,,historical manuscript result
+M20a,sparsity_safe_gain,0.00046,,,historical manuscript result
+M20a,best_indicator_correlation,0.733,,,historical manuscript result

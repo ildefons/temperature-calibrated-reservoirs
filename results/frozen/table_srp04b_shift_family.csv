@@ -1,0 +1,4 @@
+held_out_shift_family,historical_best_fixed_nrmse,historically_fitted_sparse_nrmse,historical_sparse_relative_gain,gain_ci_low,gain_ci_high,windows_harmed,window_count
+Strong correlated additive noise,1.460592,0.977092,0.33103,0.230798,0.416113,0,36
+Offset drift,0.694981,0.593168,0.146498,0.1118,0.168237,16,72
+Block missingness,0.477566,0.508831,-0.065466,-0.151088,-0.004883,45,72

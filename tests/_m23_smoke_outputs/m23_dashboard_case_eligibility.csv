@@ -1,0 +1,4 @@
+config,case_id,safe_width,dashboard_defined,n_windows,exclusion_reason
+smoke_N20_K5_baseline,memory_d10__trial0,1,False,3,singleton_safe_region
+smoke_N20_K9_finer_grid,memory_d10__trial0,1,False,3,singleton_safe_region
+smoke_N30_K5_larger_reservoir,memory_d10__trial0,1,False,3,singleton_safe_region

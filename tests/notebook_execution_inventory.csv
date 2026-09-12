@@ -1,0 +1,12 @@
+notebook,code_cells,executed_cells,cells_with_output
+01_safe_region_transfer_M19a.ipynb,4,4,3
+02_safe_region_controls_M19b.ipynb,3,3,2
+03_indicator_reliability_M19c.ipynb,3,3,2
+04_standard_tasks_M19d.ipynb,3,3,2
+05_structural_path_ablation_M20a.ipynb,3,3,2
+06_appliances_energy_M20b.ipynb,4,4,2
+07_air_quality_M20c2.ipynb,4,4,2
+08_structural_audit_M21.ipynb,3,3,2
+09_grid_size_robustness_M23.ipynb,11,11,7
+10_distribution_shift_SRP04b.ipynb,17,17,7
+11_shift_postprocessing_SRP05.ipynb,13,13,12

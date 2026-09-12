@@ -1,0 +1,4 @@
+config,N,K,safe_width_fraction,safe_contains_near,matched_near_rate,containment_lift_near,safe_gain,safe_minus_matched_gain,high_minus_low_mean_gain_safe_dispersion,high_minus_low_mean_gain_anchor_spread,indicator_gain_corr_safe_dispersion,indicator_gain_corr_anchor_spread,precision_lift_safe_dispersion,precision_lift_anchor_spread,support_fraction_range,spectral_radius_range,core_robustness_pass,dashboard_continuous_pass,dashboard_binary_pass
+smoke_N20_K5_baseline,20,5,0.2,1.0,0.4,2.49999999999375,0.0,0.033148831930614395,,,,,,,0.8401560558860501,0.05616631911353953,True,False,False
+smoke_N20_K9_finer_grid,20,9,0.1111111111111111,0.0,0.1111111111111111,0.0,0.0,0.032226453633903224,,,,,,,0.8401560558860501,0.05814362628265979,False,False,False
+smoke_N30_K5_larger_reservoir,30,5,0.2,0.0,0.4,0.0,0.0,-0.055822408526254995,,,,,,,0.8741921212790215,0.1784830374672377,False,False,False

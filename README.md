@@ -65,5 +65,7 @@ compiled preview. Final archival repository and journal identifiers should be ad
 
 ## License
 
-A code/data license has not yet been selected by the author. Add the desired license before making
-the repository public.
+Source code and computational notebooks in this repository are released under
+the MIT License. The manuscript and third-party datasets are not covered by
+this software license and remain subject to their respective copyright and
+licensing terms.

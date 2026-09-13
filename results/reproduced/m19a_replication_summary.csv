@@ -1,2 +1,2 @@
-n_cases,near_optimal_containment,exact_oracle_containment,mean_safe_gain,mean_full_grid_gain,mean_safe_width
-48,0.7916666666666666,0.6041666666666666,0.0013128394028481926,0.007872564858665535,3.0208333333333335
+n_cases,near_optimal_containment,exact_oracle_containment,mean_safe_gain,safe_gain_ci_low,safe_gain_ci_high,mean_full_grid_gain,mean_safe_width
+48,0.7916666666666666,0.6041666666666666,0.0013128394028481926,0.0005076035462948373,0.0023917233612796847,0.007872564858665535,3.0208333333333335

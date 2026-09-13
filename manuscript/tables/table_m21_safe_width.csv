@@ -1,4 +1,4 @@
-Study,epsilon_abs,Mean safe width,Width fraction,Near-optimal containment ratio,Full-test best-safe gain
-Synthetic path comparison,0.005,3.23/13,24.8%,3.12x,0.00230
-Appliances Energy,0.002,1.75/13,13.5%,4.25x,0.00014
-Air Quality,0.002,2.50/13,19.2%,3.63x,0.01635
+Study,epsilon_abs,Mean safe width,Width fraction,Near-optimal containment ratio,Mean best-safe gain
+Synthetic path comparison,0.005,2.89/13,22.3%,2.36x,0.00253
+Appliances Energy,0.002,2.75/13,21.2%,0.69x,0.00685
+Air Quality,0.002,2.75/13,21.2%,1.39x,0.00856

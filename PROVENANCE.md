@@ -14,10 +14,14 @@ All M19-M21 submission values live under `results/reproduced/`. Manuscript table
 
 ## Development archive
 
-`results/frozen/` is retained only as a development-history archive. Its values are not used as evidence in manuscript v19.0 and are not a source for any M19-M21 submission table or figure.
+`results/frozen/` is retained only as a development-history archive. Its values are not used as evidence in manuscript v19.5 and are not a source for any M19-M21 submission table or figure.
 
 ## Real-data protocol
 
 The real-data studies use four deterministic chronological splits per dataset. The first split starts at the beginning of the prepared series, the final split is the latest complete train/validation/test block, and the two intermediate starts are evenly spaced between them. Standardization is fitted only on each training split. The reservoir trial index equals the split index. The real-data safe-region tolerance is `epsilon_abs=0.002`, `epsilon_rel=0.10`.
 
 The official Air Quality CSV is parsed with decimal commas and `%d/%m/%Y %H.%M.%S` timestamps.
+
+## Neural Networks submission freeze
+
+Manuscript v19.5 changes journal presentation and Elsevier source formatting only relative to the v19.4 scientific freeze. The exact flat Editorial Manager source is retained under `submission_v19_5/`; the compiled submission PDF is identified by SHA-256 in `SUBMISSION_FREEZE.md`. The submission source uses `elsarticle` with `preprint,12pt,authoryear` and `\journal{Neural Networks}`.

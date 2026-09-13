@@ -1,6 +1,6 @@
 # Execution status
 
-Submission-layer execution pass completed on **2026-09-13**.
+Submission-layer execution pass completed on **2026-09-13** and frozen for the *Neural Networks* v19.5 submission.
 
 ## M19-M21
 
@@ -20,4 +20,13 @@ Key real-data temperature results:
 - **SRP04b:** original full execution retained; current-environment smoke test available.
 - **SRP05:** original full execution retained.
 
-Run `python tests/verify_repository.py` and `python tests/verify_submission_layer.py` after applying the v19.0 patch.
+## Verification
+
+The executable-evidence reset passed both repository-level and submission-layer verification before the v19.5 formatting freeze. V19.5 changes no experimental outputs or publication-facing numerical values.
+
+Run:
+
+```bash
+python tests/verify_repository.py
+python tests/verify_submission_layer.py
+```

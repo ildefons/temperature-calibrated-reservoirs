@@ -1,10 +1,10 @@
 cff-version: 1.2.0
-title: "Temperature-Calibrated Reservoirs: reproducibility package"
+title: "Allocation Temperature in Reservoir Computing: reproducibility package"
 message: "If you use this code, please cite the associated manuscript."
 type: software
 authors:
   - family-names: "Magrans de Abril"
     given-names: "Ildefons"
 affiliation: "Universitat Politècnica de Catalunya - BarcelonaTech (UPC)"
-version: "0.1.0-pre-submission"
+version: "19.5-neural-networks-submission"
 date-released: "2026-09-13"

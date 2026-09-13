@@ -25,10 +25,22 @@ The repository therefore does **not** pretend that reconstructed files are the l
   unrecovered task-composition details are explicitly identified.
 - M19d and M20a run fresh protocol replications using the preserved M23/M26 implementation
   lineage and the recovered task lists/settings.
-- M20b and M20c2 contain executable real-data reconstructions and preserve the historical
-  manuscript values. They require the public UCI files in `data/`.
+- M20b and M20c2 are executable real-data reconstructions using the official UCI datasets.
+  Version 18.3 passes the native real-data `epsilon_abs=0.002` explicitly. M20c2 also parses
+  the official CSV's decimal commas and `HH.MM.SS` time strings explicitly.
 - M21 is a post-hoc audit. It preserves the historical audit record and also summarizes fresh
   reconstructed M20a outputs when available.
+
+## Real-data reconstruction audit
+
+Fresh executions of M20b and M20c2 on the official UCI files confirm that the current reconstructed
+protocols are not numerically equivalent to the lost historical June experiments. For the temperature
+path, the fresh full-test best-safe gains are `0.0223057595` for Appliances Energy and `0.0` for Air
+Quality, compared with publication-facing v18.3 values `0.00014` and `0.01635`, respectively.
+
+This discrepancy is retained as provenance evidence. It is **not** resolved by tuning the reconstructed
+notebooks to force agreement, and it is **not** used to silently replace the historical publication
+numbers. The fresh summaries live under `results/reproduced/`.
 
 ## Historical frozen results
 
@@ -43,8 +55,9 @@ study and a single full-test `safe_best_gain_vs_default` definition across the p
 real-data, and M21 summary tables. The exact changes are documented in
 `manuscript/CHANGELOG_V18_3.md`.
 
-This means that `results/frozen/` and `manuscript/tables/` serve different purposes: the former
-preserves the historical record, while the latter is the current publication layer.
+This means that `results/frozen/`, `results/reproduced/`, and `manuscript/tables/` serve different
+purposes: the first preserves the historical archive, the second records fresh reconstruction outputs,
+and the third is the current publication-facing layer.
 
 ## Fresh results
 

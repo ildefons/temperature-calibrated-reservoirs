@@ -16,11 +16,6 @@ Version 18 is the human-reader and reproducibility consolidation. It foregrounds
 
 See `CHANGELOG_V18.md` for the detailed change list.
 
-## Submission-time item still pending
-
-The Code and Data Availability section contains a placeholder statement that a public archival repository URL will be inserted before journal submission. The repository URL must be added after the release is created.
-
-
 ## V18.1 note
 
 V18.1 is a minimal consensus cleanup of v18. It removes wording that could imply allocation temperature is a smoothed/generalized form of sparsity. No science or results changed.
@@ -35,3 +30,7 @@ Repository: https://github.com/ildefons/temperature-calibrated-reservoirs
 ## v18.3 consistency update
 
 V18.3 applies the native safe-region tolerance of each audited study and uses a single full-test best-safe gain definition across the path-comparison, real-data, and M21 summary tables. See `CHANGELOG_V18_3.md`.
+
+## v18.4 provenance clarification
+
+V18.4 clarifies that the real-data table contains retained historical summaries. Full repaired executions of the public-data reconstruction notebooks preserve the documented structural temperature path but do not numerically recover the historical operational point estimates. See `CHANGELOG_V18_4.md`.

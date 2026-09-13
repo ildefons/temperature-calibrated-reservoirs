@@ -7,7 +7,7 @@ Reproducibility package for **Temperature-Calibrated Reservoirs: Safe Operating 
 
 ## What is in this repository
 
-The repository contains the manuscript v18.3 source, frozen manuscript tables and figures,
+The repository contains the manuscript v18.4 source, frozen manuscript tables and figures,
 publication-facing notebooks, common reservoir utilities, and verification checks.
 
 The computational record has two provenance classes:
@@ -28,8 +28,8 @@ The computational record has two provenance classes:
 | 03 | `03_indicator_reliability_M19c.ipynb` | Prediction-variation indicators | Executed fresh replication |
 | 04 | `04_standard_tasks_M19d.ipynb` | Standard-task boundary panel | Executed fresh replication |
 | 05 | `05_structural_path_ablation_M20a.ipynb` | Temperature/gain/leak/sparsity comparison | Executed fresh replication |
-| 06 | `06_appliances_energy_M20b.ipynb` | UCI Appliances Energy | Preflight executed; requires public data |
-| 07 | `07_air_quality_M20c2.ipynb` | UCI Air Quality | Preflight executed; requires public data |
+| 06 | `06_appliances_energy_M20b.ipynb` | UCI Appliances Energy | Full reconstructed execution on official UCI data |
+| 07 | `07_air_quality_M20c2.ipynb` | UCI Air Quality | Full reconstructed execution on official UCI data |
 | 08 | `08_structural_audit_M21.ipynb` | Width/tolerance/structural audit | Executed |
 | 09 | `09_grid_size_robustness_M23.ipynb` | Grid-density and reservoir-size robustness | Original full execution retained; current-environment smoke test passed |
 | 10 | `10_distribution_shift_SRP04b.ipynb` | Held-out shift feasibility audit | Original full execution retained; current-environment smoke test passed |
@@ -57,14 +57,11 @@ python tests/verify_repository.py
 `results/frozen/` preserves the historical numerical records assembled with manuscript v18.1.
 `results/reproduced/` contains fresh outputs produced by the publication reconstruction. They are
 deliberately kept separate, and the reconstructed notebooks are not tuned to reproduce historical
-point estimates. The current v18.3 publication tables are in `manuscript/tables/`; v18.3 applies the
-safe-region metric-consistency corrections documented in `manuscript/CHANGELOG_V18_3.md`.
+point estimates. The current v18.4 manuscript retains the v18.3 numerical publication tables in `manuscript/tables/`. V18.3 applies the safe-region metric-consistency corrections documented in `manuscript/CHANGELOG_V18_3.md`; v18.4 adds the real-data provenance clarification documented in `manuscript/CHANGELOG_V18_4.md`.
 
 ## Manuscript
 
-The `manuscript/` directory contains the v18.3 LaTeX source, bibliography, publication tables,
-version changelogs, Overleaf notes, and the compiled v18.3 preview. The v18.3 consistency update
-uses each study's native safe-region tolerance and a common full-test best-safe gain definition.
+The `manuscript/` directory contains the v18.4 LaTeX source, bibliography, publication tables, version changelogs, Overleaf notes, and the compiled v18.4 preview. V18.4 keeps all v18.3 numerical values and makes the real-data historical-versus-reconstructed provenance explicit.
 
 ## License
 

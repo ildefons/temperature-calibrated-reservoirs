@@ -21,6 +21,6 @@ For M20c2, the official UCI Air Quality CSV itself requires two explicit parser 
 
 ## Repository checks
 
-The previous repository verification pass reported **48/48 passing checks**. Those checks predate the repaired full M20b/M20c2 execution and should be rerun after these repaired artifacts are integrated into the repository.
+`python tests/verify_repository.py` reports **48/48 passing checks** after integration of the repaired full M20b/M20c2 executions.
 
 Historical manuscript values and fresh reconstructed outputs remain deliberately separated. The reconstructed M19--M21 notebooks are protocol replications, not falsely presented as recovered June-2026 binaries, and they are not tuned to force exact agreement with historical point estimates.

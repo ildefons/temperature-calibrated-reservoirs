@@ -7,7 +7,7 @@ Reproducibility package for **Temperature-Calibrated Reservoirs: Safe Operating 
 
 ## What is in this repository
 
-The repository contains the manuscript v18.1 source, frozen manuscript tables and figures,
+The repository contains the manuscript v18.3 source, frozen manuscript tables and figures,
 publication-facing notebooks, common reservoir utilities, and verification checks.
 
 The computational record has two provenance classes:
@@ -54,14 +54,17 @@ python tests/verify_repository.py
 
 ## Historical versus fresh numbers
 
-`results/frozen/` contains the values used by manuscript v18.1. `results/reproduced/` contains
-fresh outputs produced by the publication reconstruction. They are deliberately kept separate.
-The reconstructed notebooks are not tuned to reproduce historical point estimates.
+`results/frozen/` preserves the historical numerical records assembled with manuscript v18.1.
+`results/reproduced/` contains fresh outputs produced by the publication reconstruction. They are
+deliberately kept separate, and the reconstructed notebooks are not tuned to reproduce historical
+point estimates. The current v18.3 publication tables are in `manuscript/tables/`; v18.3 applies the
+safe-region metric-consistency corrections documented in `manuscript/CHANGELOG_V18_3.md`.
 
 ## Manuscript
 
-The `manuscript/` directory contains the v18.1 LaTeX source, bibliography, frozen tables, and a
-compiled preview. Final archival repository and journal identifiers should be added before public release.
+The `manuscript/` directory contains the v18.3 LaTeX source, bibliography, publication tables,
+version changelogs, Overleaf notes, and the compiled v18.3 preview. The v18.3 consistency update
+uses each study's native safe-region tolerance and a common full-test best-safe gain definition.
 
 ## License
 

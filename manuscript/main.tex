@@ -270,7 +270,7 @@ The absolute tolerance $\epsilon$ in Eq.~\eqref{eq:safe_region} is obtained from
   \epsilon = \max\!\left\{\epsilon_{\mathrm{abs}},\;\epsilon_{\mathrm{rel}}\left[\max_{a\in\mathcal A}U_{\mathrm{val}}(a)-\min_{a\in\mathcal A}U_{\mathrm{val}}(a)\right]\right\}.
   \label{eq:tolerance_rule}
 \end{equation}
-Unless otherwise stated, $\epsilon_{\mathrm{abs}}=0.005$ and $\epsilon_{\mathrm{rel}}=0.10$. The relative term scales the tolerance with the observed validation range, while the absolute floor avoids an unrealistically narrow threshold on nearly flat validation curves. The same numerical tolerance is used retrospectively when identifying near-optimal test candidates. In the tolerance-sensitivity analysis, $\epsilon_{\mathrm{abs}}$ remains fixed and $\epsilon_{\mathrm{rel}}$ is varied.
+Unless otherwise stated, $\epsilon_{\mathrm{rel}}=0.10$. The absolute floor follows the frozen protocol of each study: $\epsilon_{\mathrm{abs}}=0.005$ in the controlled synthetic/path experiments and $\epsilon_{\mathrm{abs}}=0.002$ in the two real-world sensor studies. The relative term scales the tolerance with the observed validation range, while the absolute floor avoids an unrealistically narrow threshold on nearly flat validation curves. Each study uses the same resulting numerical tolerance retrospectively when identifying near-optimal test candidates. In tolerance-sensitivity analyses, the study-specific $\epsilon_{\mathrm{abs}}$ remains fixed and $\epsilon_{\mathrm{rel}}$ is varied.
 
 \begin{center}
 \fbox{\begin{minipage}{0.94\textwidth}
@@ -480,19 +480,19 @@ A key question is whether allocation temperature adds a genuinely different rese
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{llllll}
 \toprule
-Path & Effective-support range & Spectral-radius range & Best-safe gain & Safe-control gain & Interpretation \\
+Path & Effective-support range & Spectral-radius range & Full-test best-safe gain & Safe-control gain & Interpretation \\
 \midrule
-Temperature & $55.19$ & $0.046$ & $0.00504$ & $+0.02303$ & continuous concentration path \\
-Gain & $0.00$ & $1.438$ & $0.00879$ & positive & amplification/spectral-radius path \\
-Leak-rate & $0.00$ & -- & $0.01249$ & positive & update-timescale path \\
-Sparsity & $58.00$ & task-dependent & $0.00046$ & mixed & hard top-$k$ support path \\
+Temperature & $55.19$ & $0.046$ & $0.00230$ & $+0.02303$ & continuous concentration path \\
+Gain & $0.00$ & $1.438$ & $0.00241$ & $+0.03173$ & amplification/spectral-radius path \\
+Leak-rate & $0.00$ & -- & $0.00422$ & $+0.06486$ & update-timescale path \\
+Sparsity & $58.00$ & task-dependent & $0.00015$ & $+0.04160$ & hard top-$k$ support path \\
 \bottomrule
 \end{tabular}}
 \end{table}
 
-The comparison supports three conclusions. First, allocation temperature changes the concentration of recurrent weight mass in a way that gain and leak rate do not. Its mean effective-support range is $55.19$ equivalent inputs, while gain and leak-rate paths leave this concentration measure essentially unchanged. At the same time, the spectral-radius range along the temperature path is only $0.046$, whereas the gain path changes spectral radius by $1.438$ while leaving effective support fixed. These complementary signatures distinguish allocation temperature from ordinary amplification. Second, the temperature safe region remains enriched relative to same-width controls: its mean safe-minus-control gain is $+0.02303$ with a positive confidence lower bound. Third, gain and leak rate provide larger within-safe-region improvement on some tasks. Allocation temperature should therefore be treated as an additional structural coordinate, not as a replacement for existing controls.
+The comparison supports three conclusions. First, allocation temperature changes the concentration of recurrent weight mass in a way that gain and leak rate do not. Its mean effective-support range is $55.19$ equivalent inputs, while gain and leak-rate paths leave this concentration measure essentially unchanged. At the same time, the spectral-radius range along the temperature path is only $0.046$, whereas the gain path changes spectral radius by $1.438$ while leaving effective support fixed. These complementary signatures distinguish allocation temperature from ordinary amplification. Second, the temperature safe region remains enriched relative to same-width controls: its mean safe-minus-control gain is $+0.02303$ with a positive confidence lower bound. Third, under the common full-test best-safe metric, gain and leak rate provide larger within-safe-region improvement in the synthetic comparison. Allocation temperature should therefore be treated as an additional structural coordinate, not as a replacement for existing controls.
 
-Hard sparsity is the closest structural comparison because it also changes how many inputs matter. The difference is that top-$k$ sparsity sets excluded edges exactly to zero, whereas allocation temperature continuously redistributes weight mass across the allowed edges. In this sense, allocation temperature provides a continuous concentration control that can move between highly focused and diffuse recurrent rows without changing the hard connectivity pattern. The hard-sparsity path has a similar effective-support range ($58.00$) but much smaller safe-region improvement ($0.00046$) in this comparison.
+Hard sparsity is the closest structural comparison because it also changes how many inputs matter. The difference is that top-$k$ sparsity sets excluded edges exactly to zero, whereas allocation temperature continuously redistributes weight mass across the allowed edges. In this sense, allocation temperature provides a continuous concentration control that can move between highly focused and diffuse recurrent rows without changing the hard connectivity pattern. The hard-sparsity path has a similar effective-support range ($58.00$) but smaller full-test safe-region improvement ($0.00015$) than allocation temperature ($0.00230$) in this comparison.
 
 \begin{figure}[t]
 \centering
@@ -505,7 +505,7 @@ Hard sparsity is the closest structural comparison because it also changes how m
 \includegraphics[width=\textwidth]{figures/fig7_operational_ablation.png}
 \caption{Improvement available inside each validation-safe region.}
 \end{subfigure}
-\caption{Path ablations. Allocation temperature and sparsity change recurrent support; gain and leak-rate do not. Operationally, allocation temperature is useful and structurally distinct but not dominant over all one-dimensional paths.}
+\caption{Path ablations. Allocation temperature and sparsity change recurrent support; gain and leak-rate do not. Panel (b) reports full-test best-safe NRMSE gain under a common metric across controls. Operationally, allocation temperature is useful and structurally distinct but not dominant over all one-dimensional paths.}
 \label{fig:path_ablation}
 \end{figure}
 
@@ -521,15 +521,15 @@ Table~\ref{tab:real_world} applies the same calibration procedure to two public 
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{lllllll}
 \toprule
-Dataset & Rows/features & Target & Temp. support range & Temp. best-safe gain & Temp. safe $-$ control & Temp. path indicators \\
+Dataset & Rows/features & Target & Temp. support range & Temp. full-test best-safe gain & Temp. safe $-$ control & Temp. path indicators \\
 \midrule
-Appliances Energy & $19729/32$ & log future appliances, $h=6$ & $45.62$ & $0.00341$ & $-0.01199$ [$-0.05331$, $0.01532$] & $0.510$ / $0.522$ \\
+Appliances Energy & $19729/32$ & log future appliances, $h=6$ & $45.62$ & $0.00014$ & $-0.01199$ [$-0.05331$, $0.01532$] & $0.510$ / $0.522$ \\
 Air Quality & $9356/19$ & future C6H6, $h=1$ & $45.55$ & $0.01635$ & $+0.05312$ [$0.00695$, $0.09534$] & $0.727$ / $0.646$ \\
 \bottomrule
 \end{tabular}}
 \end{table}
 
-The two datasets provide complementary evidence for how the allocation-temperature axis behaves on measured sensor data. On Appliances Energy, allocation temperature retains its structural signature and its two path-sensitivity indicators remain informative, but the safe-region-minus-shuffled point estimate is negative ($-0.01199$) and its confidence interval crosses zero ($[-0.05331,0.01532]$). This is a null result and does not support safe-region superiority on that dataset; leak-rate also provides stronger available safe-region improvement there. On Air Quality, the result is stronger: the temperature safe region outperforms same-width controls, prediction dispersion and low/high endpoint spread correlate strongly with the improvement available inside the safe region, and allocation temperature gives the largest within-safe-region improvement among the four tested paths. Together, the two datasets show that the structural behavior transfers to measured sensor data, while the size of the operational benefit remains dataset-dependent.
+The two datasets provide complementary evidence for how the allocation-temperature axis behaves on measured sensor data. On Appliances Energy, allocation temperature retains its structural signature and its two path-sensitivity indicators remain informative, but its full-test best-safe gain is only $0.00014$, while the safe-region-minus-shuffled point estimate is negative ($-0.01199$) and its confidence interval crosses zero ($[-0.05331,0.01532]$). This is a null result and does not support safe-region superiority on that dataset; leak-rate also provides stronger available safe-region improvement there. On Air Quality, the result is stronger: the temperature safe region outperforms same-width controls, prediction dispersion and low/high endpoint spread correlate strongly with the improvement available inside the safe region, and allocation temperature gives the largest within-safe-region improvement among the four tested paths. Together, the two datasets show that the structural behavior transfers to measured sensor data, while the size of the operational benefit remains dataset-dependent.
 
 
 
@@ -540,20 +540,20 @@ This section tests whether the main conclusions depend on the width of the valid
 
 \subsection{Safe-region width and tolerance sensitivity}
 
-The validation safe region is intentionally conservative. At the default relative tolerance $\epsilon_{\mathrm{rel}}=0.10$, the temperature safe region occupies only a small fraction of the 13-point candidate grid: mean widths are $2.40$ candidate points in the synthetic path-comparison study, $1.75$ candidate points on Appliances Energy, and $2.50$ candidate points on Air Quality (Table~\ref{tab:m21_safe_width}). Relative to all same-width intervals on the same grid, near-optimal containment is enriched by factors of $3.73$, $4.25$, and $3.63$, respectively. These factors should be interpreted as finite-grid empirical quantities, not as grid-resolution-invariant constants. Under the reported grids, the enrichment over same-width controls shows that the safe region identifies a more informative part of the candidate path than interval width alone would provide. Sensitivity checks over $\epsilon_{\mathrm{rel}}\in\{0.05,0.10,0.15,0.20\}$ preserve the qualitative conclusion: increasing tolerance widens the safe component and increases containment, while the same-width interval comparison remains the appropriate null model.
+The validation safe region is intentionally conservative. At the default relative tolerance $\epsilon_{\mathrm{rel}}=0.10$, using each study's native absolute floor, the temperature safe region occupies only a small fraction of the 13-point candidate grid: mean widths are $3.23$ candidate points in the synthetic path-comparison study, $1.75$ candidate points on Appliances Energy, and $2.50$ candidate points on Air Quality (Table~\ref{tab:m21_safe_width}). Relative to all same-width intervals on the same grid, near-optimal containment is enriched by factors of $3.12$, $4.25$, and $3.63$, respectively. These factors should be interpreted as finite-grid empirical quantities, not as grid-resolution-invariant constants. Under the reported grids, the enrichment over same-width controls shows that the safe region identifies a more informative part of the candidate path than interval width alone would provide. For the fully regenerated synthetic path-comparison audit, sensitivity checks over $\epsilon_{\mathrm{rel}}\in\{0.05,0.10,0.15,0.20\}$ preserve the qualitative conclusion: increasing tolerance widens the safe component while same-width interval comparisons remain the appropriate null model. The real-data rows below report the native $\epsilon_{\mathrm{rel}}=0.10$ summaries.
 
 \begin{table}[t]
 \centering
-\caption{Safe-region width at $\epsilon_{\mathrm{rel}}=0.10$. The validation-selected regions occupy a small fraction of the tested grid and contain near-optimal test points more often than same-width control intervals.}
+\caption{Safe-region width at $\epsilon_{\mathrm{rel}}=0.10$ using each study's native absolute tolerance. The validation-selected regions occupy a small fraction of the tested grid and contain near-optimal test points more often than same-width control intervals. Full-test best-safe gain is reported with the same definition in all rows.}
 \label{tab:m21_safe_width}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{lllll}
+\begin{tabular}{llllll}
 \toprule
-Study & Mean safe width & Width fraction & Near-optimal containment ratio & Safe gain \\
+Study & $\epsilon_{\mathrm{abs}}$ & Mean safe width & Width fraction & Near-optimal containment ratio & Full-test best-safe gain \\
 \midrule
-Synthetic path comparison & $2.40/13$ & $18.5\%$ & $3.73\times$ & $0.00504$ \\
-Appliances Energy & $1.75/13$ & $13.5\%$ & $4.25\times$ & $0.00341$ \\
-Air Quality & $2.50/13$ & $19.2\%$ & $3.63\times$ & $0.01635$ \\
+Synthetic path comparison & $0.005$ & $3.23/13$ & $24.8\%$ & $3.12\times$ & $0.00230$ \\
+Appliances Energy & $0.002$ & $1.75/13$ & $13.5\%$ & $4.25\times$ & $0.00014$ \\
+Air Quality & $0.002$ & $2.50/13$ & $19.2\%$ & $3.63\times$ & $0.01635$ \\
 \bottomrule
 \end{tabular}}
 \end{table}
@@ -566,7 +566,7 @@ The main result is continuous: windows with greater prediction dispersion or gre
 
 The structural audit separates support from gain. Tables~\ref{tab:path_ablation} and \ref{tab:real_world} show that allocation temperature changes effective support substantially, whereas gain and leak-rate leave it approximately fixed. The complementary spectral-radius comparison points in the opposite direction. Gain changes spectral radius by about $1.4$ in the synthetic comparison and both real-data studies, while allocation temperature changes it only mildly ($0.046$, $0.083$, and $0.042$). The two controls therefore affect different measurable properties: gain primarily changes recurrent amplification, whereas allocation temperature primarily changes the concentration of recurrent weight mass.
 
-Hard sparsity is the closest structural comparator because it also changes how recurrent influence is distributed across inputs. The distinction is both structural and operational. Sparsity imposes hard top-$k$ truncation, setting excluded edges to zero. Allocation temperature continuously redistributes recurrent weight mass over the same candidate row, preserving graded weights. In the path comparison, sparsity has support range $58.00$ but best-safe gain only $0.00046$, whereas the allocation-temperature path has comparable support expansion and best-safe gain $0.00504$ (Table~\ref{tab:path_ablation}). On Air Quality, allocation temperature is also the strongest operational path. Allocation temperature therefore provides a continuous concentration control that is distinct from hard support selection.
+Hard sparsity is the closest structural comparator because it also changes how recurrent influence is distributed across inputs. The distinction is both structural and operational. Sparsity imposes hard top-$k$ truncation, setting excluded edges to zero. Allocation temperature continuously redistributes recurrent weight mass over the same candidate row, preserving graded weights. In the path comparison, sparsity has support range $58.00$ but full-test best-safe gain only $0.00015$, whereas the allocation-temperature path has comparable support expansion and full-test best-safe gain $0.00230$ (Table~\ref{tab:path_ablation}). On Air Quality, allocation temperature is also the strongest operational path. Allocation temperature therefore provides a continuous concentration control that is distinct from hard support selection.
 
 
 \section{Robustness to Grid Density and Reservoir Size}
@@ -747,7 +747,7 @@ The final distribution-shift study shows why the structural dimension remains in
 
 \section*{Code and Data Availability}
 
-The computational record includes the experiment notebooks, generated tables, figure scripts, environment information, exact random seeds, and manuscript source. Appendix~\ref{app:repro_map} maps each main-text result to the corresponding computational artifact. The public datasets are the UCI Appliances Energy Prediction and UCI Air Quality datasets. A public archival repository URL will be inserted before journal submission; until that release is created, the complete reproducibility package is available from the author on request.
+The public reproducibility package is available in the \href{https://github.com/ildefons/temperature-calibrated-reservoirs}{project repository}. It contains the manuscript source, frozen manuscript tables and figures, environment specifications, computational notebooks, and verification checks. Appendix~\ref{app:repro_map} maps each main-text result to the corresponding computational artifact. The repository distinguishes original executed analyses retained for M23, SRP04b, and SRP05 from explicitly labelled publication-reconstruction notebooks for M19a--M21, whose original June 2026 notebook binaries could not be recovered. Historical manuscript values and fresh reconstructed outputs are kept separate, with the distinction documented in \path{PROVENANCE.md}. The public datasets are the UCI Appliances Energy Prediction and UCI Air Quality datasets; they are not redistributed in the repository, and \path{data/README.md} provides the expected filenames and source information.
 
 \appendix
 \section{Softmax allocation and entropy monotonicity}
@@ -881,7 +881,7 @@ $N=150,K=13$ & $0.925$ & $0.991$ \\
 \section{Reproducibility map}
 \label{app:repro_map}
 
-Table~\ref{tab:repro_map} provides the file-level mapping from manuscript results to the computational record. The repository will contain the executed notebooks, generated CSV tables, figure-generation scripts, environment specification, and exact seeds used for the reported results.
+Table~\ref{tab:repro_map} provides the file-level mapping from manuscript results to the computational record. The public repository contains the publication notebooks, frozen manuscript tables, fresh reconstructed outputs where applicable, figure assets, environment specifications, and verification checks. Repository provenance is explicit: M23, SRP04b, and SRP05 retain their original executed analyses, whereas M19a--M21 are publication reconstructions because the original June 2026 notebook binaries could not be recovered.
 
 \begin{table}[H]
 \centering
@@ -902,7 +902,7 @@ Section~\ref{sec:shift_audit_results}, Tables~\ref{tab:shift_task_results}--\ref
 \end{tabularx}
 \end{table}
 
-\noindent\textbf{Repository:} public archival URL to be inserted before journal submission.
+\noindent\textbf{Repository:} \url{https://github.com/ildefons/temperature-calibrated-reservoirs}.
 
 
 \section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}

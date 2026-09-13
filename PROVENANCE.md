@@ -27,14 +27,24 @@ The repository therefore does **not** pretend that reconstructed files are the l
   lineage and the recovered task lists/settings.
 - M20b and M20c2 contain executable real-data reconstructions and preserve the historical
   manuscript values. They require the public UCI files in `data/`.
-- M21 is a post-hoc audit. It preserves the historical audit table and also summarizes fresh
+- M21 is a post-hoc audit. It preserves the historical audit record and also summarizes fresh
   reconstructed M20a outputs when available.
 
-## Frozen results
+## Historical frozen results
 
-`results/frozen/` contains the numerical tables integrated into manuscript v18.1. These files are
-archival records of the manuscript claims, not outputs reverse-engineered by the reconstructed
-notebooks.
+`results/frozen/` preserves the numerical records assembled with manuscript v18.1. These files
+remain archival evidence and are not silently rewritten to match later manuscript cleanup.
+
+## Manuscript v18.3 consistency layer
+
+The current publication source is manuscript v18.3. Its publication-facing tables live under
+`manuscript/tables/`. Version 18.3 applies the native safe-region absolute tolerance of each audited
+study and a single full-test `safe_best_gain_vs_default` definition across the path-comparison,
+real-data, and M21 summary tables. The exact changes are documented in
+`manuscript/CHANGELOG_V18_3.md`.
+
+This means that `results/frozen/` and `manuscript/tables/` serve different purposes: the former
+preserves the historical record, while the latter is the current publication layer.
 
 ## Fresh results
 

@@ -1,5 +1,5 @@
-Path,Support range,Best-safe gain,Safe-control gain,Best indicator corr.,Interpretation
-temperature,55.19,0.00504,+0.02303,0.733,distinct support path; enriched over controls; task dependent
-gain,0.0,0.00879,positive,task-dependent,scale/amplification path
-leak-rate,0.0,0.01249,positive,task-dependent,timescale path; strongest available safe-region improvement in M20a
-sparsity,58.0,0.00046,mixed,task-dependent,discrete support path
+Path,Support range,Full-test best-safe gain,Safe-control gain,Best indicator corr.,Interpretation
+temperature,55.19,0.00230,+0.02303,0.733,distinct support path; enriched over controls; task dependent
+gain,0.0,0.00241,+0.03173,task-dependent,scale/amplification path
+leak-rate,0.0,0.00422,+0.06486,task-dependent,timescale path; largest full-test best-safe gain in M20a
+sparsity,58.0,0.00015,+0.04160,task-dependent,discrete support path
